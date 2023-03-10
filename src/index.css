@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --swiper-theme-color: white !important;
+    --swiper-navigation-size: 15px !important;
+}
+::-webkit-scrollbar {
+    @apply h-[10px] w-[10px];
+}
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+::-webkit-scrollbar-button {
+    @apply hidden;
+}
+::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-[#121212] transition duration-300 hover:bg-[#0e0d0d];
+}
+html {
+    @apply select-none overflow-x-hidden md:overflow-x-visible;
+}
+body {
+    @apply overflow-x-hidden bg-dark text-gray-lighten md:overflow-x-visible;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+select:focus {
+    outline: none !important;
+}
+.tw-slider-range::-webkit-slider-thumb {
+    @apply pointer-events-auto h-4 w-4 appearance-none rounded-full bg-primary;
+}
+.tw-pagination-btn {
+    @apply tw-flex-center inline-block h-8 w-8 rounded-full bg-dark-lighten transition duration-300 hover:bg-dark-lighten-2;
+}
+.tw-flex-center {
+    @apply flex items-center justify-center;
+}
+.tw-absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+.tw-absolute-center-horizontal {
+    @apply absolute left-1/2 -translate-x-1/2;
+}
+.tw-absolute-center-vertical {
+    @apply absolute top-1/2 -translate-y-1/2;
+}
+.tw-black-backdrop {
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.85) 65%);
+}
+.tw-black-backdrop-2 {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(179, 179, 193, 0) 7%,
+        rgba(107, 107, 115, 0) 93%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+.tw-black-backdrop-3 {
+    background: linear-gradient(
+        65deg,
+        hsl(229, 17%, 18%) 70%,
+        transparent 140%
+    );
+}
+.tw-multiline-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.tw-multiline-ellipsis-2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.tw-banner-slider .swiper-button-prev {
+    @apply !top-[6%] !left-[2%] !z-20 hidden sm:block;
+}
+.tw-banner-slider .swiper-button-next {
+    @apply !top-[6%] !left-[5%] !z-20 hidden sm:block;
+}
+.tw-section-slider .swiper-button-prev {
+    --swiper-navigation-size: 25px !important;
+    z-index: 20 !important;
+}
+.tw-section-slider .swiper-button-next {
+    --swiper-navigation-size: 25px !important;
+    z-index: 20 !important;
+}
